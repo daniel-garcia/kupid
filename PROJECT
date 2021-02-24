@@ -1,0 +1,7 @@
+domain: atlas.infoblox.com
+repo: github.com/daniel-garcia/kupid
+resources:
+- group: db
+  kind: Relation
+  version: v1
+version: "2"

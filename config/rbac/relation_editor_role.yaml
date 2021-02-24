@@ -1,0 +1,24 @@
+# permissions for end users to edit relations.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: relation-editor-role
+rules:
+- apiGroups:
+  - db.atlas.infoblox.com
+  resources:
+  - relations
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - db.atlas.infoblox.com
+  resources:
+  - relations/status
+  verbs:
+  - get
